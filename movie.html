@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movies List</title>
+</head>
+<body>
+    <h1>List of Movies</h1>
+    <ul>
+        {% for movie in movies %}
+        <li>
+            <strong>Title:</strong> {{ movie.title }}<br>
+            <strong>Genre:</strong> {{ movie.genre }}<br>
+            <strong>Actors:</strong> {{ movie.actors }}<br>
+            <strong>Publication Year:</strong> {{ movie.publication_year }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('add') }}">Add New Movie</a>
+</body>
+</html>
